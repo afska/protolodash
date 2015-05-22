@@ -1,0 +1,21 @@
+{
+  "name": "protolodash",
+  "version": "3.9.0",
+  "description": "Lodash utils inserted in the prototypes of your primitive types.",
+  "main": "main.js",
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/rodri042/protolodash"
+  },
+  "keywords": [
+    "lodash"
+  ],
+  "author": "Rodrigo Alfonso",
+  "license": "ISC",
+  "dependencies": {
+    "lodash": "^3.9.1"
+  },
+  "devDependencies": {
+    "request": "^2.55.0"
+  }
+}
