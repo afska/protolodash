@@ -1,6 +1,6 @@
 {
   "name": "protolodash",
-  "version": "3.9.1",
+  "version": "3.9.2",
   "description": "Lodash utils inserted in the prototypes of your primitive types.",
   "main": "main.js",
   "repository": {
