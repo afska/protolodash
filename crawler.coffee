@@ -7,12 +7,12 @@ url = "https://raw.githubusercontent.com/lodash/lodash/master/doc/README.md"
 request.get url, (err, {body: docs}) =>
 	if err then process.exit 1
 
-	included = ["Array", "Collection", "Date", "Function", "Object", "String"]
+	included = ["Array", "Collection", "Date", "Function", "String"]
 
 	adapt = (protos) =>
 		protos.Array = protos.Array.concat protos.Collection
 		_.omit protos, "Collection"
-		
+
 	exps = [
 		/^## `(\w+)`$/                      # ## `Title`
 		/^\* <a .+>`_\..+` -> `(.+)`<\/a>$/ # * <a href="...">`_.old` -> `new`</a>
@@ -28,7 +28,7 @@ request.get url, (err, {body: docs}) =>
 			protos.push name: elem, methods: []
 		else
 			_.last(protos).methods.push elem
-		
+
 		protos
 
 	protos = _(docs)
@@ -40,4 +40,4 @@ request.get url, (err, {body: docs}) =>
 		.mapValues (proto) => proto.methods
 		.value()
 
-	console.log adapt protos
+	console.log "module.exports = #{JSON.stringify adapt protos};"
