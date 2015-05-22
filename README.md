@@ -1,7 +1,7 @@
 # protolodash
 Talk directly with whom you have to talk!
 
-This is a wrapper of [lodash](https://github.com/lodash/lodash) library, that inserts its utils into the prototypes of your primitive types. In teory, it's auto-updatable as the function names are obtained with a crawler of the official docs. Enjoy!
+This is a wrapper of [lodash](https://github.com/lodash/lodash) library, that inserts its utils into the prototypes of your primitive types. In theory, it's auto-updatable as the function names are obtained with a crawler of the official docs. Enjoy!
 
 ## users
 ### how to use
